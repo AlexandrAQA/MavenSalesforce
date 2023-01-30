@@ -27,8 +27,9 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-        //set driver into test context
-        //iTestContext.setAttribute("driver", driver);
+        //1.login field: //span[@id='idcard-identity']
+        //2.psw: //input[@class='input r4 wide mb16 mt8 password']
+        //3. login btn: //input[@class='button r4 wide primary']
 
     }
 
