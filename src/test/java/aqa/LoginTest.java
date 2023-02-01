@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest {
                 .submitForm();
 
         new AccountsPage(driver).open().clickNewButtonAccPage();
-        System.out.println();
+
     }
 }
 

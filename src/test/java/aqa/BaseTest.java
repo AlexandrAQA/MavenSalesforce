@@ -9,6 +9,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BaseTest {
 
@@ -17,11 +19,13 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
+
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        //we can't see how browser executes test
-        //options.setHeadless(true);
-        driver = new ChromeDriver(options);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+        chromeOptions.setExperimentalOption("prefs", prefs);
+        driver = new ChromeDriver(chromeOptions);
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
