@@ -22,17 +22,19 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void open() {
+    public LoginPage open() {
         driver.get("https://home34.my.salesforce.com/");
-        //wait.until(ExpectedConditions.visibilityOfElementLocated());
+        return this;
     }
 
-    public void fillInUserName(String userName) {
+    public LoginPage fillInUserName(String userName) {
         userNameInput.sendKeys(userName);
+        return this;
     }
 
-    public void fillInPassword(String password) {
+    public LoginPage fillInPassword(String password) {
         passwordInput.sendKeys(password);
+        return this;
     }
 
     public void submitForm() {
