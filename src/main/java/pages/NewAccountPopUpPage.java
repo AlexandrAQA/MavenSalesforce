@@ -10,7 +10,6 @@ public class NewAccountPopUpPage extends BasePage{
 
     public NewAccountPopUpPage createNewAccount(String accountName){
         new Input(driver, "Account Name").fillIn(accountName);
-
         return this;
 
     }
