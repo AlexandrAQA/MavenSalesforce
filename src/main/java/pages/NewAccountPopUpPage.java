@@ -7,4 +7,3 @@ public class NewAccountPopUpPage extends BasePage{
         super(driver);
     }
 }
-//        // //span[text()='Account Name']//ancestor::div[contains(@class,'uiInput')]//input
