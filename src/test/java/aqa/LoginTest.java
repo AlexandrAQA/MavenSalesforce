@@ -3,6 +3,7 @@ package aqa;
 import org.testng.annotations.Test;
 import pages.AccountsPage;
 import pages.LoginPage;
+import pages.NewAccountPopUpPage;
 
 public class LoginTest extends BaseTest {
 
@@ -13,7 +14,9 @@ public class LoginTest extends BaseTest {
                 .fillInPassword("Zx!cvbnm23+")
                 .submitForm();
 
-        new AccountsPage(driver).open().clickNewButtonAccPage();
+        new AccountsPage(driver).open()
+                .clickNewButtonAccPage();
+        new NewAccountPopUpPage(driver).createNewAccount("Account2");
 
     }
 }
