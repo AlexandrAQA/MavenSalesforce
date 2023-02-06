@@ -16,7 +16,9 @@ public class LoginTest extends BaseTest {
 
         new AccountsPage(driver).open()
                 .clickNewButtonAccPage();
-        new NewAccountPopUpPage(driver).createNewAccount("Account2");
+        new NewAccountPopUpPage(driver).
+                createNewAccount("Account2")
+                .saveAccount();
 
     }
 }
