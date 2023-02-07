@@ -1,5 +1,6 @@
 package aqa;
 
+import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 import pages.AccountsPage;
 import pages.LoginPage;
@@ -16,8 +17,10 @@ public class LoginTest extends BaseTest {
 
         new AccountsPage(driver).open()
                 .clickNewButtonAccPage();
+        Faker faker = new Faker();
+
         new NewAccountPopUpPage(driver).
-                createNewAccount("Account2")
+                createNewAccount(faker.company().name())
                 .saveAccount();
 
     }
