@@ -22,6 +22,7 @@
         <allure-maven.version>2.12.0</allure-maven.version>
         <aspectj.version>1.9.19</aspectj.version>
         <allure-testng.version>2.20.0</allure-testng.version>
+        <javafaker-version>1.0.2</javafaker-version>
     </properties>
 
     <dependencies>
@@ -64,6 +65,13 @@
             <artifactId>allure-testng</artifactId>
             <version>${allure-testng.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${javafaker-version}</version>
+        </dependency>
+
 
     </dependencies>
 
