@@ -16,11 +16,12 @@ public class BasePage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
-    public void waitForPageLoaded(){
+
+    public void waitForPageLoaded() {
         new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver){
-                return ((JavascriptExecutor)driver).executeScript("return document.readyState")
-                        .toString().equals("complete");
+            public Boolean apply(WebDriver driver) {
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState")
+                                                    .toString().equals("complete");
             }
         };
     }

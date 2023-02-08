@@ -18,15 +18,13 @@ public class AccountsPage extends BasePage {
     }
 
     public AccountsPage open() {
-        driver.
-                get("https://home34.lightning.force.com/lightning/o/Account/list?filterName=Recent");
-        final By accountTabLocatorXpath = By.xpath("//span[@class='slds-var-p-right_x-small']");
-        wait.until(ExpectedConditions.
-                visibilityOfElementLocated(accountTabLocatorXpath));
+        driver.get("https://home34.lightning.force.com/lightning/o/Account/list?filterName=Recent");
+        By accountsLocator = By.xpath("//div[contains(@class,'slds-breadcrumb__item')]//span[text()='Accounts']");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(accountsLocator));
         return this;
     }
 
-    public AccountsPage clickNewButtonAccPage() {
+    public AccountsPage clickNewButton() {
         newButton.click();
         return this;
     }

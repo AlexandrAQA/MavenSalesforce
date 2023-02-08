@@ -21,19 +21,15 @@ public class BaseTest {
     public void setUp() {
 
         WebDriverManager.chromedriver().setup();
-        ChromeOptions chromeOptions = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("profile.default_content_setting_values.notifications", 2);
-        chromeOptions.setExperimentalOption("prefs", prefs);
-        driver = new ChromeDriver(chromeOptions);
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", prefs);
+        driver = new ChromeDriver(options);
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        //1.login field: //span[@id='idcard-identity']
-        //2.psw: //input[@class='input r4 wide mb16 mt8 password']
-        //3. login btn: //input[@class='button r4 wide primary']
 
     }
 

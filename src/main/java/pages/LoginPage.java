@@ -17,6 +17,7 @@ public class LoginPage extends BasePage {
     @FindBy(id = "Login")
     private WebElement loginButton;
 
+
     public LoginPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);

@@ -13,11 +13,12 @@ public class Input {
         this.label = label;
     }
 
-    public Input fillIn(String text){
+    public Input fillIn(String text) {
         By fullLocator =
                 By.xpath(String.format
-                        ("//span[text()='%s']//ancestor::div[contains(@class,'uiInput')]//input", label));
-        driver.findElement(fullLocator).sendKeys();
+                                       ("//span[text()='%s']//ancestor::div[contains(@class,'uiInput')]//input", label));
+        driver.findElement(fullLocator).sendKeys(text);
         return this;
     }
 }
+//span[text()='Account Name']//ancestor::div[contains(@class,'uiInput')]//input
