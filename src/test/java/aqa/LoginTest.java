@@ -2,9 +2,9 @@ package aqa;
 
 import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
-import pages.AccountsPage;
-import pages.LoginPage;
-import pages.NewAccountModal;
+import pages.page.AccountsPage;
+import pages.page.LoginPage;
+import pages.page.NewAccountModal;
 
 public class LoginTest extends BaseTest {
 
