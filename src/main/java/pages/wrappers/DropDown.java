@@ -17,7 +17,7 @@ public class DropDown {
         By fullLocator = By.xpath(String.format
                                        ("//span[text()='%s']//ancestor::div[contains(@class,'uiInput')]//a", label));
         driver.findElement(fullLocator).click();
-        driver.findElement(By.xpath("//a[@title='Competitor']"));
+        driver.findElement(By.xpath(String.format("//a[@title='%s']", option))).click();
         return this;
     }
 }

@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.page.AccountsPage;
 import pages.page.LoginPage;
 import pages.page.NewAccountModal;
+import pages.wrappers.DropDown;
 
 public class LoginTest extends BaseTest {
 
@@ -21,8 +22,9 @@ public class LoginTest extends BaseTest {
         new NewAccountModal(driver).
                 createNewAccount(faker.company().name(),
                         faker.internet().url(),
-                        faker.phoneNumber().phoneNumber())
-                .saveAccount();
+                        faker.phoneNumber().phoneNumber());
+        new DropDown(driver, "Type").select("Competitor");
+               // .saveAccount();
 
 
     }
