@@ -1,6 +1,8 @@
 package aqa;
 
 import com.github.javafaker.Faker;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import pages.page.AccountsPage;
 import pages.page.LoginPage;
@@ -8,6 +10,14 @@ import pages.page.NewAccountModal;
 import pages.wrappers.DropDown;
 
 public class LoginTest extends BaseTest {
+    static final Logger userLogger = LogManager.getLogger(LoginTest.class);
+
+    @Test
+    public void logsTest(){
+        userLogger.info("Test {} has been started", "logTest");
+    }
+
+
 
     @Test
     public void createAccountTest() {
