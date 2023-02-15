@@ -13,10 +13,9 @@ public class LoginTest extends BaseTest {
     static final Logger userLogger = LogManager.getLogger(LoginTest.class);
 
     @Test
-    public void logsTest(){
+    public void logsTest() {
         userLogger.info("Test {} has been started", "logTest");
     }
-
 
 
     @Test
@@ -34,7 +33,7 @@ public class LoginTest extends BaseTest {
                         faker.internet().url(),
                         faker.phoneNumber().phoneNumber());
         new DropDown(driver, "Type").select("Competitor");
-               // .saveAccount();
+        // .saveAccount();
 
 
     }
